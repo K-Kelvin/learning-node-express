@@ -1,0 +1,10 @@
+<% include("header.ejs") %>
+    <h1>All Contacts</h1>
+    <%
+    
+    users.forEach(function(user){ %>
+        <li><%= user.name %>: <%= user.email %></li>
+    <% })
+    
+    %>
+<% include("footer.ejs") %>
