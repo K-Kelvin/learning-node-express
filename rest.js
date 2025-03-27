@@ -140,12 +140,12 @@ app.route("/todos")
 
         const todo = await Todo.create({ title, isComplete: false });
 
-        res.json(todo);
+        res.status(201).json(todo);
     })
     .get(async (req, res) => {
         const todos = await Todo.findAll();
 
-        res.json(todos);
+        res.status(200).json(todos);
     });
 
 // start our REST API server
